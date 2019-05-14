@@ -1,0 +1,71 @@
+body {
+    background: rgb(133, 133, 133);
+}
+
+/* Header part */
+nav {
+    display: flex;
+    position: relative;
+    background: brown;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+nav a {
+    font: sans-serif;
+    font-size: 24px;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+nav .shop {
+    position: absolute;
+    right: 0px;
+    padding-right: 10px;
+}
+
+main {
+    background: rgb(78, 105, 255);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    height: 100%;
+}
+h3 {
+    margin: 0;
+    padding: 30px;
+}
+button {
+    width: 200px;
+    height: 40px;
+    background: rgb(124, 155, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background: rgb(52, 74, 146);
+}
+
+/* Store part */
+.filter {
+    text-align: center;
+    margin: 30px auto;
+}
+.rooms {
+    background: yellow;
+    max-width: 1040px;
+    margin: auto;
+}
+.room {
+    display: inline-block;
+    width: 250px;
+    margin: 5px;
+    height: 300px;
+    background: red;
+}

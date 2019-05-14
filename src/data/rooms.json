@@ -1,0 +1,51 @@
+{
+    "1": {
+        "beds": 3,
+        "chindrenBeds": 2,
+        "price": 1000,
+        "pets": true,
+        "food": true
+    },
+    "2": {
+        "beds": 2,
+        "chindrenBeds": 2,
+        "price": 900,
+        "pets": true,
+        "food": true
+    },
+    "3": {
+        "beds": 2,
+        "chindrenBeds": 0,
+        "price": 800,
+        "pets": true,
+        "food": true
+    },
+    "4": {
+        "beds": 2,
+        "chindrenBeds": 0,
+        "price": 600,
+        "pets": true,
+        "food": false
+    },
+    "5": {
+        "beds": 1,
+        "chindrenBeds": 0,
+        "price": 500,
+        "pets": true,
+        "food": true
+    },
+    "6": {
+        "beds": 1,
+        "chindrenBeds": 0,
+        "price": 300,
+        "pets": false,
+        "food": false
+    },
+    "7": {
+        "beds": 1,
+        "chindrenBeds": 0,
+        "price": 350,
+        "pets": false,
+        "food": false
+    }
+}
