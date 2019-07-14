@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import background from "../../images/bg.jpg";
+// import { Link } from "react-router-dom";
+
+import setBackground from "../../api/setBackground";
 class Home extends React.Component {
+    componentDidMount() {
+        setBackground("body", background);
+    }
     render() {
         return (
             <main>
-                <h3>
-                    This project about using React and Redux to create hotel
-                    rooms booking site.
-                </h3>
-                <Link to="/store">
-                    <button>Go to rooms</button>
-                </Link>
+                <h1>Beach resort</h1>
             </main>
         );
     }

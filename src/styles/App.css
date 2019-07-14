@@ -1,16 +1,32 @@
 body {
+    box-sizing: border-box;
     background: rgb(133, 133, 133);
+    width: 100vw;
+    height: 100vh;
+    margin: 0vw;
+}
+
+/* General */
+.visible-opacity {
+    opacity: 1;
+}
+
+.visible-opacity {
+    opacity: 0;
 }
 
 /* Header part */
 nav {
+    box-sizing: border-box;
     display: flex;
     position: relative;
-    background: brown;
     color: white;
     justify-content: center;
     align-items: center;
-    padding: 10px 0px;
+    padding: 5vh 0px;
+    background: rgba(0, 0, 0, 0.479);
+    text-shadow: 0 0 5px black;
+    height: 5vh;
 }
 
 nav a {
@@ -25,27 +41,53 @@ nav .shop {
     position: absolute;
     right: 0px;
     padding-right: 10px;
+    padding-left: 30px;
+    /* overflow: hidden; */
+    /* background: red; */
 }
-
+.shop-item {
+    transition: 1s;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: rgba(30, 255, 0, 0.623);
+    box-shadow: 0 0 15px rgba(30, 255, 0, 0.623),
+        0 0 15px rgba(30, 255, 0, 0.623) inset;
+    left: 2px;
+    top: 2px;
+    line-height: 30px;
+    font-size: 2em;
+    border-radius: 50%;
+}
+.shop-item::before {
+    content: "+";
+    position: relative;
+    left: 4.5px;
+    top: -3px;
+}
+/* Main part Home */
 main {
-    background: rgb(78, 105, 255);
+    display: block;
     color: white;
     font-size: 24px;
     text-align: center;
-    height: 100%;
 }
-h3 {
+h1 {
     margin: 0;
     padding: 30px;
+    background: rgba(0, 0, 0, 0.322);
+    text-shadow: 0 0 5px black;
+    margin-top: 30vh;
 }
 button {
-    width: 200px;
-    height: 40px;
+    width: 60%;
+    height: 30px;
     background: rgb(124, 155, 255);
     color: white;
     border: none;
     border-radius: 5px;
     margin: 5px;
+    outline: none;
 }
 
 button:hover {
@@ -53,19 +95,201 @@ button:hover {
 }
 
 /* Store part */
-.filter {
-    text-align: center;
-    margin: 30px auto;
+.store {
+    position: relative;
+    display: flex;
+    box-sizing: content-box;
+    top: 0vh;
+    height: 90vh;
+    width: 100%;
 }
+
 .rooms {
-    background: yellow;
-    max-width: 1040px;
-    margin: auto;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.rooms::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.rooms-container {
+    margin-top: 1vh;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: calc(900px + 3vw);
 }
 .room {
-    display: inline-block;
-    width: 250px;
-    margin: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 1vh 0.5vw;
+    width: 300px;
     height: 300px;
-    background: red;
+    background: rgb(80, 80, 80);
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0 10px black, 0 0 5px white inset;
+}
+.room .decription {
+    box-sizing: border-box;
+    color: white;
+    background: rgba(0, 0, 0, 0.616);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -100%;
+    transition: 1s;
+    padding: 2vh 2vw;
+    text-align: center;
+}
+.room p {
+    position: relative;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.459);
+    color: white;
+    text-align: center;
+    margin: 0 0 0.2vh 0;
+    width: 100%;
+    padding: 5px 10px;
+    transition: 1s;
+    top: 0;
+    text-shadow: 0 0 5px black;
+}
+.info-button {
+    position: absolute;
+    transition: 1s;
+    bottom: 10px;
+}
+.reserve-button {
+    position: absolute;
+    bottom: 50px;
+    transition: 1s;
+    background: rgb(39, 146, 39);
+}
+.reserve-button:hover {
+    background: rgb(22, 82, 22);
+}
+.show-info p,
+.show-info .reserve-button {
+    transition: 1s;
+    bottom: 100%;
+}
+.show-info p {
+    top: -100%;
+}
+.show-info .decription {
+    transition: 1s;
+    bottom: 0;
+}
+
+/* Filter part */
+.filter {
+    color: white;
+    background: rgba(0, 0, 0, 0.568);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh 0;
+    width: 20%;
+}
+.filter label {
+    background: rgba(255, 255, 255, 0);
+    width: 100%;
+    text-align: center;
+    padding: 1vh 1vw;
+}
+
+.filter input[type="text"] {
+    width: 5vh;
+    text-align: center;
+    border: none;
+    background: rgba(255, 255, 255, 0.692);
+    padding: 1vh 1vw;
+    box-shadow: 0 0 5px white;
+}
+/* box-sizing:  */
+.filter label {
+    box-sizing: border-box;
+    margin-top: 10px;
+    font-size: 1em;
+}
+.filter input[type="checkbox"] {
+    position: absolute;
+    left: -500%;
+}
+
+.filter #pets-filter:checked + label,
+.filter #food-filter:checked + label {
+    background: rgba(99, 255, 99, 0.685);
+    color: black;
+}
+.filter #pets-filter:checked + label::after {
+    content: " allowed";
+}
+.filter #food-filter:checked + label::after {
+    content: " included";
+}
+.filter #pets-filter:not(:checked) + label,
+.filter #food-filter:not(:checked) + label {
+    background: rgba(255, 90, 90, 0.596);
+}
+.filter #pets-filter:not(:checked) + label::after {
+    content: " not allowed";
+}
+.filter #food-filter:not(:checked) + label::after {
+    content: " not included";
+}
+
+input[type="range"] {
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 26px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    background: rgba(255, 0, 0, 0);
+}
+input[type="range"]:focus {
+    outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 14px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #50555c;
+    background: #00000069;
+    border-radius: 14px;
+    border: 0px solid #000000;
+}
+input[type="range"]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 20px;
+    width: 40px;
+    border-radius: 12px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #00000069;
+}
+
+.reserved {
+    transition: 1s;
+}
+.reserved .reserve-button {
+    background: orange;
 }

@@ -1,49 +1,52 @@
 {
     "1": {
+        "id": 1,
         "beds": 3,
-        "chindrenBeds": 2,
         "price": 1000,
         "pets": true,
-        "food": true
+        "food": true,
+        "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, quia laborum. Soluta quo harum numquam iste consectetur. Velit, repellendus enim!",
+        "bg": "https://image.shutterstock.com/image-illustration/room-interior-background-glass-vase-260nw-1042509325.jpg"
     },
     "2": {
+        "id": 2,
         "beds": 2,
-        "chindrenBeds": 2,
         "price": 900,
         "pets": true,
         "food": true
     },
     "3": {
+        "id": 3,
         "beds": 2,
-        "chindrenBeds": 0,
         "price": 800,
         "pets": true,
-        "food": true
+        "food": true,
+        "bg": "https://img.freepik.com/free-photo/hammocks-with-palm-trees_1203-201.jpg?size=626&ext=jpg"
     },
     "4": {
+        "id": 4,
         "beds": 2,
-        "chindrenBeds": 0,
         "price": 600,
         "pets": true,
         "food": false
     },
     "5": {
+        "id": 5,
         "beds": 1,
-        "chindrenBeds": 0,
         "price": 500,
         "pets": true,
         "food": true
     },
     "6": {
+        "id": 6,
         "beds": 1,
-        "chindrenBeds": 0,
         "price": 300,
         "pets": false,
         "food": false
     },
     "7": {
+        "id": 7,
         "beds": 1,
-        "chindrenBeds": 0,
         "price": 350,
         "pets": false,
         "food": false

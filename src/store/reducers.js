@@ -1,3 +1,4 @@
 import { combineReducers } from "redux";
 import { storeReducer } from "./shop/reducers";
-export default combineReducers({ storeReducer });
+import { headerReducer } from "./header/reducers";
+export default combineReducers({ storeReducer, headerReducer });
